@@ -1,0 +1,13 @@
+$computername = read-host -prompt 'Input Computer Name'
+$newname = read-host -prompt 'Input New Computer Name'
+$ID = read-host -prompt 'Enter your ID'
+function RUsure {
+    $RUsure = Read-Host -Prompt 'Are you sure? This will force restart the computer. Any unsaved work will be lost (Y|N)'
+    $RUsure}
+function renamecomputer {rename-computer -computername $computername -newname $newname -domaincredential $ID -passthru -restart}
+
+if (RUsure -eq 'n')
+    {Exit}
+
+renamecomputer
+######  NOT FINISHED #######
