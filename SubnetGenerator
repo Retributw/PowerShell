@@ -1,0 +1,16 @@
+$subnet = "IP"
+$subnet2 = "IP"
+$subnet3 = "IP"
+$start = 1
+$end = 255
+$ping = 1
+while ($start -le $end) {
+$IP = "IP.$start"
+$IP2 = "IP.$start"
+$IP3 = "IP.$start"
+#Write-Host "$IP" -ForegroundColor Green
+write-Host "$IP2" -ForegroundColor Yellow
+#Write-Host "$IP3" -ForegroundColor Cyan
+#Test-Connection -ComputerName $IP -count 1 -Quiet
+$start++
+}
